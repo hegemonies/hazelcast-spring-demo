@@ -1,0 +1,6 @@
+services:
+  demo:
+    scale: 2
+    image: hazelcast-spring-demo:latest
+    ports:
+      - "8080-8085:8080"
