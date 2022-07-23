@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.12.RELEASE"
 	kotlin("jvm") version "1.7.10"
 	kotlin("plugin.spring") version "1.7.10"
+	kotlin("plugin.jpa") version "1.7.10"
 	id("com.google.cloud.tools.jib") version "3.2.1"
 }
 
@@ -13,6 +14,7 @@ version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
 
@@ -24,6 +26,9 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 	implementation("com.hazelcast:hazelcast-spring:5.1.2")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+	runtimeOnly("org.postgresql:postgresql")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

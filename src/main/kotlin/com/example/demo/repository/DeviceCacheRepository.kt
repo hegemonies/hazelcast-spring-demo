@@ -7,7 +7,9 @@ import org.springframework.stereotype.Repository
 @Repository
 class DeviceCacheRepository(
     private val deviceCache: IMap<Long, DeviceDto>,
-){
+) {
+
+    fun findById(id: Long): DeviceDto? = deviceCache[id]
 
     fun findAll() = deviceCache.values.toList().sortedBy { it.id }
 
