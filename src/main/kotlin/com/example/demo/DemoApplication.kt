@@ -5,14 +5,9 @@ import com.example.demo.repository.DeviceCacheRepository
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-import org.springframework.data.domain.PageRequest
-import org.springframework.data.hazelcast.repository.config.EnableHazelcastRepositories
 import org.springframework.stereotype.Component
 
 @SpringBootApplication
-@EnableHazelcastRepositories(
-	basePackages = ["com.example.demo"]
-)
 class DemoApplication
 
 fun main(args: Array<String>) {

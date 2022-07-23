@@ -22,8 +22,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-//	implementation("com.hazelcast:hazelcast-spring:5.1.2")
-	api("com.hazelcast:spring-data-hazelcast:2.4.0")
+	implementation("com.hazelcast:hazelcast-spring:5.1.2")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
