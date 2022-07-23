@@ -1,6 +1,6 @@
 package com.example.demo
 
-import com.example.demo.model.DeviceDto
+import com.example.demo.dto.DeviceDto
 import com.example.demo.repository.DeviceCacheRepository
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication

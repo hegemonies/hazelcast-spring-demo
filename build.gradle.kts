@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.12.RELEASE"
 	kotlin("jvm") version "1.7.10"
 	kotlin("plugin.spring") version "1.7.10"
+	id("com.google.cloud.tools.jib") version "3.2.1"
 }
 
 group = "com.example"
@@ -36,4 +37,13 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+jib {
+	from {
+		image = "azul/zulu-openjdk:11.0.13"
+	}
+	to {
+		image = "hazelcast-spring-demo:latest"
+	}
 }
