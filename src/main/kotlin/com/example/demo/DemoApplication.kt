@@ -5,6 +5,7 @@ import com.example.demo.repository.DeviceCacheRepository
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.data.domain.PageRequest
 import org.springframework.data.hazelcast.repository.config.EnableHazelcastRepositories
 import org.springframework.stereotype.Component
 
@@ -30,9 +31,9 @@ class Foo(
 
 	fun saveDevices() {
 		val devices = listOf(
-			DeviceDto(1, "1.1.1.1", "ESR", "esr-home", 1),
-			DeviceDto(2, "2.2.2.2", "CISCO", "cisco1", 0),
-			DeviceDto(3, "3.3.3.3", "MES", "mes52", 1),
+			DeviceDto(1, "1.1.1.1", "ESR", "esr-home", 1, false),
+			DeviceDto(2, "2.2.2.2", "CISCO", "cisco1", 0, false),
+			DeviceDto(3, "3.3.3.3", "MES", "mes52", 1, true),
 		)
 
 		deviceCacheRepository.saveAll(devices)

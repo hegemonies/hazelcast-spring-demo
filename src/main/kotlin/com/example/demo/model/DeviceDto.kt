@@ -9,5 +9,6 @@ data class DeviceDto(
     val ip: String,
     val model: String,
     val hostname: String,
-    val status: Int
+    val status: Int,
+    val disabled: Boolean = false,
 ) : Serializable
